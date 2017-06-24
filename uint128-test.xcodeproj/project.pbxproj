@@ -12,6 +12,7 @@
 		16F84E971EFE048A00B04381 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F84E951EFE048A00B04381 /* Main.storyboard */; };
 		16F84E991EFE048A00B04381 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16F84E981EFE048A00B04381 /* Assets.xcassets */; };
 		16F84E9C1EFE048B00B04381 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F84E9A1EFE048B00B04381 /* LaunchScreen.storyboard */; };
+		16F84EA61EFE06A900B04381 /* UInt128.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F84EA41EFE05CA00B04381 /* UInt128.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		16F84E981EFE048A00B04381 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16F84E9B1EFE048B00B04381 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16F84E9D1EFE048B00B04381 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16F84EA41EFE05CA00B04381 /* UInt128.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UInt128.framework; path = Carthage/Build/iOS/UInt128.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16F84EA61EFE06A900B04381 /* UInt128.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				16F84E901EFE048A00B04381 /* uint128-test */,
 				16F84E8F1EFE048A00B04381 /* Products */,
+				16F84EA31EFE05C800B04381 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +66,14 @@
 				16F84E9D1EFE048B00B04381 /* Info.plist */,
 			);
 			path = "uint128-test";
+			sourceTree = "<group>";
+		};
+		16F84EA31EFE05C800B04381 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16F84EA41EFE05CA00B04381 /* UInt128.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,7 +220,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -257,7 +269,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -270,6 +282,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H2X2RB7XHH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "uint128-test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.test123.uint128-test";
@@ -284,6 +300,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H2X2RB7XHH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "uint128-test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.test123.uint128-test";
@@ -312,6 +332,7 @@
 				16F84EA21EFE048B00B04381 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
